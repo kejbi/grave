@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import home, offer, prices, about, order, contact
+from . import views
 
 urlpatterns = [
-    path('aktualnosci/', home, name='home'),
-    path('oferta/', offer, name='offer'),
-    path('cennik/', prices, name='prices'),
-    path('o-nas/', about, name='about'),
-    path('kontakt/', contact, name='contact')
+    path('', views.home, name='home'),
+    path('oferta/', views.offer, name='offer'),
+    path('cennik/', views.prices, name='prices'),
+    path('o-nas/', views.about, name='about'),
+    path('kontakt/', views.contact, name='contact')
 ]

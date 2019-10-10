@@ -12,7 +12,7 @@ def offer(request):
     return render(request, 'core/offer.html')
 
 def prices(request):
-    pass
+    return render(request, 'core/prices.html')
 
 def order(request):
     pass

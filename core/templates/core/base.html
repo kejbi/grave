@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'core/main.css' %}" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Grave Legionowo</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <div class="collapse navbar-collapse w-75 justify-content-center" id="navbarNav">
             <ul class="navbar-nav nav-fill w-75">
             <li class="nav-item">
-                <a class="nav-link" href="#">O nas</a>
+                <a class="nav-link" href="{% url 'about' %}">O nas</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Oferta</a>

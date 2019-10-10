@@ -1,7 +1,25 @@
 {% extends "core/base.html" %}
 {% block content %}
     <h3>O nas</h3>
-    <h4>"Śpieszmy się kochać ludzi tak szybko odchodzą"</h4>
-    <h4>ks. J. Twardowski</h4>
+    <div class="d-flex flex-column align-items-center">
+        <h4 class="font-italic">"Śpieszmy się kochać ludzi tak szybko odchodzą"</h4>
+        <h5>ks. J. Twardowski</h5>
+    </div>
+    <div>
+        <h4>Szanowny Kliencie!</h4>
+        <p>W świecie, który stał się coraz bardziej mobilny oraz wymaga od nas poświęcenia więcej czasu na godne funkcjonowanie w życiu doczesnym, stajemy się bardziej zapracowani i zdyszani życiem codziennym.  </p>
+        <p>Pomimo ogromnych chęci niejednokrotnie brakuje nam czasu na posprzątanie miejsc wiecznego spoczynku naszych rodzin, przyjaciół, znajomych... Wspomnienie po naszych bliskich długo pozostaje w naszych sercach.</p>
+        <p>Naszą usługę - Opieka Nad Grobami - polecamy wszystkim tym, którzy z różnych przyczyn nie mogą osobiście odwiedzić, posprzątać, zapalić znicz, zaopiekować się grobami bliskich, a ich los nie jest im obojętny...</p>
+        <p>Zajmujemy się profesjonalnym sprzątaniem grobów, myciem nagrobków. W zakresie naszych usług opieki nad grobami znajdziecie Państwo zarówno sprzątanie małych grobów urnowych jak i sprzątanie i mycie grobowców. Myjemy i sprzątamy zarówno nagrobki z granitu, marmuru, lastryko oraz piaskowca. </p>
+        <p>Udokumentowaniem wykonanej pracy są zdjęcia, które przesyłamy do Państwa e-mailem.</p>
+        <p>Serdecznie zapraszamy do zapoznania się z formularzem zamówień</p>
+        <div class="d-flex justify-content-around buttons">
+            <a class="btn btn-lg w-25 buttons-btn" href="{% url 'offer' %}">Oferta </a>
+            <a class="btn btn-lg w-25 buttons-btn" href="{% url 'prices' %}">Cennik </a>
+            <a class="btn btn-lg w-25 buttons-btn" href="{% url 'order' %}">Formularz zamówień</a>
+        </div>
+        
+    </div>
+    
     
 {% endblock %}

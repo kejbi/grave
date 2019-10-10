@@ -9,7 +9,7 @@ def home(request):
     return render(request,'core/home.html', context=context)
 
 def offer(request):
-    pass
+    return render(request, 'core/offer.html')
 
 def prices(request):
     pass

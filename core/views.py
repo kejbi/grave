@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post
+from .forms import ZamownienieForm
+from django.contrib import messages
+
 # Create your views here.
 def home(request):
     context = {
@@ -15,10 +18,18 @@ def prices(request):
     return render(request, 'core/prices.html')
 
 def order(request):
-    pass
+    if request.method == 'POST':
+        form = ZamownienieForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Dziękujemy za złożenie zamówienia. Oczekuj emaila z potwierdzeniem.')
+            return redirect('home')
+    else:
+        form = ZamownienieForm()
+    return render(request, 'core/order.html', {'form': form})
 
 def contact(request):
-    pass
+    return render(request, 'core/contact.html')
 
 def about(request):
     return render(request, 'core/about.html')

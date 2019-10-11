@@ -1,0 +1,77 @@
+{% extends "core/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h3>Zamów już teraz!</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{form.imię|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6">
+                {{form.nazwisko|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{form.email|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6">
+                {{form.telefon|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                {{form.usługa|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-4">
+                {{form.rodzaj_grobu|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-4">
+                {{form.częstotliwość|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{form.imię_zmarłego|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6">
+                {{form.nazwisko_zmarłego|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{form.data_urodzenia|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-6">
+               {{form.data_śmierci|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                {{form.kwatera|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-4">
+                {{form.rząd|as_crispy_field}}
+            </div>
+            <div class="form-group col-md-4">
+                {{form.nr_grobu|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                {{form.data_usługi|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                {{form.komentarz|as_crispy_field}}
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-block" type="submit">Zamów</button>
+        </div>
+    </form>
+    
+    
+{% endblock %}

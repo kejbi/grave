@@ -1,4 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+.page-header {
+    border-bottom: 2px solid #212529;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
 
 nav {
     font-family: 'Abril Fatface', cursive;
@@ -8,10 +22,25 @@ nav {
 .navbar-brand{
     font-size: 24px;
 }
+
 #navbarNav{
     flex-grow: initial;
 }
+.page-content{
+    flex: 1 0 auto;
+}
 
+.footer {
+    flex-shrink: 0;
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 2vh;
+}
+  
 @media (max-width: 768px) { 
     .buttons{
         flex-direction: column;

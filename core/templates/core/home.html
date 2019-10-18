@@ -1,9 +1,9 @@
 {% extends "core/base.html" %}
 {% block content %}
     
-    <h3>Aktualności</h3>
+    <h3 class="page-header">Aktualności</h3>
     {% for post in posts %}
-        <div class="card">
+        <div class="card mb-3">
             <div class="card-header">
                 {{post.data}}
             </div>

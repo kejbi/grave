@@ -1,6 +1,6 @@
 {% extends "core/base.html" %}
 {% block content %}
-    <h3>O nas</h3>
+    <h3 class="page-header">O nas</h3>
     <div class="d-flex flex-column align-items-center">
         <h4 class="font-italic">"Śpieszmy się kochać ludzi tak szybko odchodzą"</h4>
         <h5>ks. J. Twardowski</h5>
@@ -14,9 +14,9 @@
         <p>Udokumentowaniem wykonanej pracy są zdjęcia, które przesyłamy do Państwa e-mailem.</p>
         <p>Serdecznie zapraszamy do zapoznania się z formularzem zamówień</p>
         <div class="d-flex justify-content-around buttons">
-            <a class="btn btn-secondary btn-lg w-25 buttons-btn" href="{% url 'offer' %}">Oferta </a>
-            <a class="btn btn-secondary btn-lg w-25 buttons-btn" href="{% url 'prices' %}">Cennik </a>
-            <a class="btn btn-secondary btn-lg w-25 buttons-btn" href="{% url 'order' %}">Formularz zamówień</a>
+            <a class="btn btn-secondary btn-lg w-25 buttons-btn" href="{% url 'offer' %}">Oferta <i class="demo-icon icon-right-big"></i></a>
+            <a class="btn btn-secondary btn-lg w-25 buttons-btn" href="{% url 'prices' %}">Cennik <i class="demo-icon icon-right-big"></i> </a>
+            <a class="btn btn-secondary btn-lg w-25 buttons-btn" href="{% url 'order' %}">Formularz zamówień <i class="demo-icon icon-right-big"></i></a>
         </div>
         
     </div>

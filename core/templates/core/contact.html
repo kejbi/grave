@@ -1,8 +1,19 @@
 {% extends "core/base.html" %}
+{% load crispy_forms_tags%}
 {% block content %}
-    <h3>Skontaktuj się z nami!</h3>
+    <h3 class="page-header">Skontaktuj się z nami!</h3>
     <div style="font-size: 20px">
         <i class="demo-icon icon-phone-squared" style="color: green"></i> 123 456 789
     </div>
-    
+    <div style="font-size: 20px" class="mb-2">
+        <i class="demo-icon icon-mail-alt" style="color: red"></i> grave.legionowo@gmail.com
+    </div>
+    <div>
+        <h5 class="page-header">Napisz do nas już teraz!</h5>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn" type="submit">Wyślij</button>
+        </form>
+    </div>
 {% endblock %}

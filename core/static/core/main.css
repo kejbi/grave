@@ -10,8 +10,15 @@ body {
     padding: 1rem;
 }
 
+.quote{
+    border-bottom: 2px solid #212529;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
 .about-text{
     font-size: 1.5rem;
+    text-align: justify;
 }
 
 nav {
@@ -30,7 +37,7 @@ nav {
     flex: 1 0 auto;
 }
 
-.card-text {
+.card-text-offer {
     text-align: center;
 }
 

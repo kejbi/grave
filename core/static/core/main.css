@@ -10,7 +10,7 @@ body {
     padding: 1rem;
 }
 
-p{
+.about-text{
     font-size: 1.5rem;
 }
 
@@ -28,6 +28,20 @@ nav {
 }
 .page-content{
     flex: 1 0 auto;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.offer-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.offer-link:hover{
+    text-decoration: none;
+    color: inherit;
 }
 
 .footer {

@@ -44,14 +44,14 @@ class Zamowienie(models.Model):
     częstotliwość = models.CharField(choices=CZESTOTLIWOSCI, max_length=100, null=False, blank=False)
     imię_zmarłego = models.CharField(max_length=200, null=False, blank=False)
     nazwisko_zmarłego = models.CharField(max_length=200, null=False, blank=False)
-    data_urodzenia = models.DateField(null=True)
+    data_urodzenia = models.DateField(null=True, blank=True)
     data_śmierci = models.DateField(null=True)
     kwatera = models.CharField(max_length=10, null=True, blank=True)
     rząd = models.CharField(max_length=10, null=True, blank=True)
     nr_grobu = models.CharField(max_length=10, null=True, blank=True)
     komentarz = models.TextField(null=True, blank=True)
     data = models.DateTimeField(default=timezone.now)
-    data_usługi = models.DateField(null=False, blank=False)
+    data_usługi = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.imię} {self.nazwisko} - {self.usługa} / {self.data.strftime("%Y-%m-%d %H:%M:%S")}'

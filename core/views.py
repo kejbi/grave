@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from smtplib import SMTPException
 from grave_web import settings
-EMAIL = 'biegajski.kacper@gmail.com'
+EMAIL = 'grave.legionowo@gmail.com'
 
 # Create your views here.
 def home(request):
